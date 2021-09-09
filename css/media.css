@@ -1,0 +1,304 @@
+/*RESPONSIVO*/	
+	
+	/*TABLET 768px*/
+	
+	@media only screen and (max-width : 768px){
+		nav{
+			margin-right: 1%;
+			margin-top: 0px;
+		}
+		nav ul li{			
+			width: 15%;
+		}
+		#contatoSup{
+			width: 70%;
+			font-size: .9em;
+		}
+		#efeitoDig{
+			margin-left: 0%;
+			font-size: 1.4em;
+		}
+		#sombraHead{
+			padding: 20%;
+			height: 510px;
+		}
+		#sombraHead p{
+			font-size: 2.8em;
+		}
+		#quadroQuemSou{
+			width: 95%;
+		}
+		#priTitulo{
+			text-align: center;
+			padding: 40px 0px;
+			margin: 0 auto;
+			font-size: 1.3em;
+			/*color: rgb(0,109,150);*/
+		}
+		#quadros{
+			width: 95%;
+		}
+		#segTitulo{
+			padding: 10px 50px;
+		}
+		#segQuadro{			
+			width: 90%;
+		}
+		#fundoFormContato p{
+	    	width: 90%;
+	    }
+		#txtFormContato p{
+	    	width: 90%;  	
+		}
+		#rodape{
+		  grid-template-columns:28% 12% 40% 20%;       
+		}
+		#rodape #redesSociais div{      
+	      width: 15%;
+	      margin: 15px 5% 0px 1%;     
+	   
+	    }
+	}
+
+	/*Smartphone*/
+	@media only screen and (max-width:425px){
+		#redesSup{			
+			padding: 8px 3%;
+		}
+		#redesSup i{
+			font-size: 1.4em;
+		}
+		#contatoSup{
+			display: none;
+		}
+		#logoCabecalho{			
+			margin: 5px auto;
+			width: 40%;
+			float: none;
+		}
+		#btnResp{
+			display:block;
+			z-index: 1000;
+			color: orange;
+			position: fixed;
+			top: 35px;
+			margin: 3%;
+			background: none;
+			border: none;
+		}
+		li i{
+			width: 25px;
+			height: 25px;
+			display: table-cell;
+			align-items: center;
+			text-align: center;
+			padding-top: 5px;
+			border-radius: 25px;
+			background: orange;
+			margin-right: 8px;
+		}
+		.iconeMenuResp{
+			display: inline-block;
+		}
+		nav{
+			margin:	0px;
+			width: 50%;
+			float: none;
+			position: fixed;
+			top: 80px;
+			background: rgba(0,0,0,.9);
+			padding: 15px 0px;
+			display: none;
+		}
+		nav ul li{			
+			width: 70%;
+			border-bottom: 2px solid rgb(15,15,15);
+			display: block;
+			margin: 4% 5% 5% 10%;
+			color: white;
+			text-align: left;
+		}
+		nav ul a:hover{
+			text-decoration: none;
+		}
+		nav ul li:hover{
+			width: 60%;
+		}
+		/*i{
+			width: 90%;
+			text-align: left;
+			padding-bottom: 2%;
+			margin: 0% auto 1% auto;
+			border-bottom: 1px solid rgb(50,130,160);
+			color: white;
+		}*/
+		ul i{
+			display: block;
+			margin-left: 4%;
+			
+		}	
+		.abrirMenu{
+			display: block;
+		}
+		#sombraHead{
+			padding: 7%;
+			height: 284px;
+			text-align: center;
+		}
+		/*#imgHead{
+			height: 284px;
+		}*/
+		#priTitulo{
+			padding: 0px 0px;
+			margin: -180px auto 0 auto;
+			width:95%;
+		}
+		#priTitulo p{
+			font-size: 1.2em;
+		}
+		#quadros{
+			/*text-align: center;
+			width: 80%;
+			margin:0px auto;
+			display: grid; 
+			grid-template-columns:23% 23% 23% 23%;
+			grid-gap: 2%;*/
+			width: 80%;
+			display:block;
+			margin:20px auto;
+		}
+		.quadroTxt h4{
+			font-size: 2em;
+		}
+		.quadroTxt p{
+			font-size: 1.4em;
+		}
+		#segTitulo{
+			margin: 30px 0px;
+			padding: 40px 20px;
+		}
+		#segTitulo h3{
+			font-size: 2.5em;
+		}
+		#segTitulo p{
+			font-size: 1.7em;
+		}
+		#segQuadro{			
+			width: 80%;
+			display: block; 
+			margin:80px auto!important;
+	
+		}
+		.barraQuadros{
+			width: 80%;
+			display: block;
+			margin:0 auto;
+			border:1px solid rgb(200,200,200);
+		}
+		#formContato{
+			height: 390px;
+		}
+		#fundoFormContato{
+			height: 280px;
+			padding-top: 10px;
+
+		}
+		#txtFormContato{
+			padding: 10px 0px;
+			height: 160px;
+		}
+		#fundoFormContato p{
+	    	width: 90%;
+	    	margin: 10px auto 0 auto;
+	    	font-size: 1.4em;
+	    }
+	    #rodape{
+		  display: block;      
+		}
+		#menuRodape{
+			display: none;
+		}
+		#redesSociais{
+			text-align: left;
+			padding-left: 15%;
+		}
+		#contato{
+			padding-left: 15%;
+			font-size: 1.3em;
+			margin-bottom: 40px;
+		}
+		#logoRodape{
+	      width: 90%;          
+	      margin: 0% auto;
+	      display: block;
+	     
+	    }
+	    #rodape h4{
+	    	font-size: 17pt;
+	    }
+	    #direitos{
+	    	font-size: 1.2em;
+	    }
+	    
+		#quadroFrase{
+			width: 90%;
+		}
+		#dadosQuemSou{
+			width: 95%;
+		}
+		#quadroQuemSou{
+			height: 620px;
+		}
+		.imgSergio{
+			width: 32%;
+			margin-left: 3%;
+			/*float:none;*/
+		}
+		.txtQuemSou{
+			width: 60%;
+		}
+		.txtQuemSou h4{
+			margin-top: 24px;
+			width: 135px;
+			/*width: 115px;*/
+			/*border-bottom:3px solid orange;*/
+			/*font-size: 1.4em;*/
+		}
+		#quadroFrase{
+			width: 100%;
+			padding:15px 0 0 0; 
+			float:none;
+			height: 120px;
+		}
+		#esquerdo{
+			width: 46%;
+		}
+		#direito{
+			width: 46%;
+		}
+		.caixaPorcent{
+			width: 70%;
+			height: 18px;
+		}
+		.porcentStyle{
+			height: 10px;
+			font-size: 8pt;
+			color: black;
+		}
+		.qsSair{
+			width: 35%;
+			margin-top: 210px;
+		}
+
+	}
+	@media only screen and (max-width:375px){
+
+			#sombraHead{
+			padding: 7%;
+			height: 250px;
+			text-align: center;
+
+		}	
+
+	}
+	

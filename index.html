@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/media.css">
+	<style>
+		#contatoSup a{
+			text-decoration: none;
+		}
+		#contatoSup a span:hover{
+			color: white;
+		}
+		#contato a{
+			color: gray;
+			text-decoration: none;
+		}
+		#contato a:hover{
+			color: white;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			const tempo_intervalo = 5; //ms -> define a velocidade da animação
+			const tempo = 4000; //ms -> define o tempo total da animaçao
+
+			$('.counter-up').each(function() {  
+			  let count_to = parseInt($(this).data('countTo'));
+			  let intervalos = tempo / tempo_intervalo; //quantos passos de animação tem
+			  let incremento = count_to / intervalos; //quanto cada contador deve aumentar
+			  let valor = 0;
+			  let el = $(this);
+			  
+			  let timer = setInterval(function() {
+			    if (valor >= count_to){ //se já contou tudo tem de parar o timer
+			      valor = count_to;
+			      clearInterval(timer);
+			    }
+			    
+			    let texto = valor.toFixed(0).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+			    el.text(texto);
+			    valor += incremento;      
+			  }, tempo_intervalo);
+			});
+
+
+
+			$(".scroll").click(function(event){        
+	        	event.preventDefault();
+	        	$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);        	
+	   		}); 
+			$("#btnSobreMim").click(function(){
+				$("#quemSou").fadeIn(1000);
+			});
+			$(".qsSair").click(function(){
+				$("#quemSou").fadeOut(1000);
+			});
+			$(".ativarVoltar").click(function(){
+	   			$(".topo").css("display","block")	   			
+	   		}); 		
+	   		$(".topo").click(function(){
+	   			$(".topo").fadeOut();	   			
+	   		});
+
+
+	   		$(".abrirMenu").click(function(){
+	   			$("nav").slideDown("slow");
+	   			$(".abrirMenu").slideUp("slow");
+	   			$(".fecharMenu").slideDown("slow");
+	   		});
+   			$(".fecharMenu").click(function(){
+	   			$("nav").slideUp("slow");
+	   			$(".fecharMenu").slideUp("slow");
+	   			$(".abrirMenu").slideDown("slow");
+	   		});
+
+	   		var tela=$(window).width();//pega o largo da tela
+
+	   		if(tela<768){ //só habilita a função se a tela for menor a 768px
+	   			$(".fMenu").click(function(){	   			
+	   				$("nav").slideUp("slow");
+	   				$(".fecharMenu").slideUp("slow");
+	   				$(".abrirMenu").slideDown("slow");   			
+   				});
+	   		}
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<article id="redesSup">
+			<span>ImeserWeb 5.0 - Sergio.Jaimes</span>
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-youtube"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-twitter"></i>			
+		</article>
+		<div id="logoCabecalho">
+			<img src="img/logoSergio.png">
+		</div>
+
+		<button id="btnResp">
+				<i class="fas fa-bars fa-2x abrirMenu"></i>
+				<i class="fas fa-times-circle fa-2x fecharMenu"></i>
+		</button>
+
+		<div id="contatoSup">
+			<div>
+				<i class="fa fa-phone txtColorOr"></i><a href="http://bit.ly/2gP0wQi" name="btn-w">
+				<span class="txtColorCinza"> (11) 982 234 844</span></a>
+			</div>
+			<div>
+				<i class="fa fa-envelope txtColorOr"></i><a href="mailto:sergio3412@gmail.com?subject=Contato&cc=comunicacao@imeserweb.com&cco=sac@imeserweb.com&body=Obrigado pelo contato.">
+				<span class="txtColorCinza"> sergio3412@gmail.com</span></a>
+			</div>
+			<div>
+				<i class="fa fa-map-marker txtColorOr"></i>
+				<span class="txtColorCinza">São Paulo - SP - Brasil</span>
+			</div>
+		</div>
+		<nav>
+			<ul>
+				<li id="btnSobreMim"><i class="fa fa-user iconeMenuResp"></i> Sobre mi</li>
+				<a href="#priTitulo" class="scroll ativarVoltar"><li><i class="fa fa-list-alt iconeMenuResp"></i> Servicios</li></a>
+				<a href="#segTitulo" class="scroll ativarVoltar"><li><i class="fa fa-folder-open iconeMenuResp"></i> Portafolio</li></a>
+				<!--<li>Eventos</li>-->
+				<a href="#rodape" class="scroll ativarVoltar"><li><i class="fa fa-phone iconeMenuResp"></i> Contacto</li></a>
+			</ul>
+		</nav>
+	</header>
+
+    <div id="imgHead" style="padding: 0%;width: 100%;">      
+      <div id="sombraHead">
+      	<p class="txtColorBr">Bien venido a mi<span class="txtColorOr"> Sitio Web</span></p><br>	
+		<span id="efeitoDig">Desenvolvemos las mejores soluciones para su negocio.</span>
+      </div>
+    </div>
+
+    <div id="quemSou">
+    	<div id="quadroQuemSou">
+    		<div id="dadosQuemSou">
+	    		<div class="imgSergio">
+	    			<img src="img/sergio.jpg" alt="">
+	    		</div>
+	    		<div class="txtQuemSou">
+	    			<h4 class="txtColorBr">Sergio Jaimes</h4>
+	    			<span class="txtColorOr">Analista de sistemas</span><br>
+	    			<span class="txtColorCinza">Universidad Cruzeiro do Sul</span><br>
+	    			<span class="txtColorCinza">São Paulo - Brasil</span>
+	    		</div>
+    		</div>
+    		<div id="quadroFrase">
+    			<p>“Detrás del éxito hay un profesional altamente competitivo y comprometido con la mejora continua, llevando la innovación al siguiente nivel.”</p>
+    		</div>
+    		<hr>
+    	<!--<div id="conhecimento">-->
+    		<p class="tituloHab txtColorBr"><i class="fas fa-award txtColorOr"></i> HABILIDADES</p>
+	    		<div id="esquerdo">	
+	    			<span class="txtColorBr">HTML5</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentHtml porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 85%</span><br>
+
+	    			<span class="txtColorBr">CSS3</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentCss porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 80%</span><br>
+
+	    			<span class="txtColorBr">JS</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentJS porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 65%</span><br>
+
+	    			<span class="txtColorBr">jQuery</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentPhp porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 75%</span><br>
+	    		</div>
+	    		<div id="direito">	
+	    			<span class="txtColorBr">PHP</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentPhp porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 75%</span><br>
+
+	    			<span class="txtColorBr">MySQL</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentMysql porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 80%</span><br>
+
+	    			<span class="txtColorBr">Excel</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentExPo porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 90%</span><br>
+
+	    			<span class="txtColorBr">Power Point</span><br>
+	    			<div class="caixaPorcent">
+	    				<div class="porcentExPo porcentStyle">.</div>
+	    			</div><span class="txtColorBr"> 90%</span><br>
+
+	    			
+	    		</div>
+    	<!--</div>-->
+    		<p class="qsSair"><i class="fa fa-sign-out"></i> Cerrar</p>
+    	</div>
+    </div>
+
+    <article id="priTitulo">
+    	<h3 class="txtColorOr">PARA QUE ELEGIR UN DESENVOLVEDOR DE APLICACIONES </h3>
+    	<p class="txtColorCinza">Independiente del tamaño de su empresa, siempre existe la necesidad de utilizar aplicaciones para diversas actividades, por eso desenvolvemos las siguientes soluciones:</p>
+    </article>
+    <section id="quadros">
+    	<div class="quadro">
+    		<div class="quadroImg">
+    			<img src="img/web.png">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Sistemas Web</h4>    			
+    			<p class="txtColorCinza">Siempre disponible online, con la posibilidad de accesar a través de un computador, tablet ou smartphone.</p>
+    		</div>
+    	</div>
+    	<div class="quadro">
+    		<div class="quadroImg">
+    			<img src="img/excel.png">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Planilhas Excel</h4>    			
+    			<p class="txtColorCinza">La mayoria de los procesos desenvolvidos en Excel pueden ser automatizados, reduciendo esfuerzos y presentando mejores resultados.​</p>
+    		</div>
+    	</div>
+    	<div  class="quadro">
+    		<div  class="quadroImg">
+    			<img src="img/dashb.png">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Dashboards</h4>
+    			<p class="txtColorCinza">¿Que tal entonces integrar diversas fuentes de datos y transformar todo eso en un dashboard de lectura agradable e intuitivo?</p>
+    		</div>
+    	</div>   
+    	<div  class="quadro">
+    		<div  class="quadroImg">
+    			<img src="img/powerp.png">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Slides em  Power Point</h4>
+    			<p class="txtColorCinza">La forma como presenta es muy importante al igual como el contenido que es presentado, por eso es importante escojer un layout adecuado para su publico y el tema que será abordado.</p>
+    		</div>
+    	</div>  	
+    </section>
+    <article id="segTitulo">
+    	<h3 class="txtColorYe">Los recursos más destacados en el mercado de trabajo</h3>
+    	<p>La transformación digital en los empreendedores y en empresas proporciona un mejor desenpeño ademas de optimizar los procesos por medio de tecnologia. La implantación es realizado por fases, pues es muy importante que la organización este con ganas de adaptarse para generar ventajas competitivas.</p>
+    </article>
+     <section id="segQuadro">
+    	<div class="quadro">
+    		<div class="divImgCurso">
+    			<img src="img/financiero.jpg">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Sistema Financiero - Script PHP</h4>
+    			<p class="txtColorCinza alJustificado">Funcionalidad para gestionar los datos de los clientes, conocer el flujo de caja del negocio, el patrimonio, las entradas y salidas de pagos, ver las transacciones de un cliente individual, notas del cliente.
+				Administre las notas de los clientes, como recordatorios de una ocurrencias.</p>
+    			<span>Más informaciones <i class="fa fa-info-circle"></i></span>
+    		</div>
+    	</div>
+
+		<hr class="barraQuadros">
+
+    	<div  class="quadro">
+    		<div  class="divImgCurso">
+    			<img src="img/clientes.jpg">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Sistema de registro de clientes - Script PHP</h4>
+    			<p class="txtColorCinza txtJustificado">Sistema de ventas, registro de clientes y control de inventarios. <br>	
+				Tablero (Resumen con gráfico de control de efectivo, ingresos netos, estadísticas financieras realizadas, efectivo pendiente y total / pronóstico)..</p>
+    			<span>Más informaciones <i class="fa fa-info-circle"></i></span>
+    		</div>
+    	</div>   
+    	
+    	<hr class="barraQuadros">
+
+    	<div  class="quadro">
+    		<div  class="divImgCurso">
+    			<img src="img/dashboard.jpg">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Paquete de Dashboards Editables</h4>
+    			<p class="txtColorCinza txtJustificado">Hojas de cálculo de panel listas para usar para infografías de Excel y Excel de alto nivel. en portugués, inglés. <br>
+    			Funciones y elementos visuales modernos y editables que son fáciles de entender y gráficos con funciones para copiar para sus proyectos.</p>
+    			<span>Más informaciones <i class="fa fa-info-circle"></i></span>
+    		</div>
+    	</div>
+
+    	<hr class="barraQuadros">
+
+    	<div class="quadro">
+    		<div class="divImgCurso">
+    			<img src="img/planillaEmp.jpg">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Planillas Empresariales</h4>
+    			<p class="txtColorCinza txtJustificado">¿Su empresa tiene al menos una hoja de cálculo de gestión para ayudar a controlar las actividades estratégicas o esta herramienta sigue siendo un elemento extraño? La gestión empresarial no es posible sin herramientas de optimización, reducción de errores, incluso de orientación y medición de resultados.</p>
+    			<span>Más informaciones <i class="fa fa-info-circle"></i></span>
+    		</div>
+    	</div>
+
+    	<hr class="barraQuadros">
+
+    	<div  class="quadro">
+    		<div  class="divImgCurso">
+    			<img src="img/slide.jpg">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Slides para presentaciones</h4>
+    			<p class="txtColorCinza txtJustificado">Las presentaciones de diapositivas actúan como la garantía más común para presentaciones al público. Sin embargo, más que solo soporte, las diapositivas pueden ayudar a desarrollar la experiencia del espectador de cualquier presentación..</p>
+    			<span>Mais informações <i class="fa fa-info-circle"></i></span>
+    		</div>
+    	</div>   
+
+    	<hr class="barraQuadros">
+
+    	<div  class="quadro">
+    		<div  class="divImgCurso">
+    			<img src="img/dash.jpg">
+    		</div>	
+    		<div class="quadroTxt">
+    			<h4>Dashboards Personalizados</h4>
+    			<p class="txtColorCinza txtJustificado">Dashboard es un panel visual que contiene información, métricas e indicadores de la empresa. La idea es que se representen las cifras relevantes para la estrategia empresarial y el logro de los objetivos organizacionales.</p>
+    			<span>Mais informações <i class="fa fa-info-circle"></i></span>
+    		</div>
+    	</div>   	
+    </section>
+    <div id="btnTodosCursos">
+    	<!--<button>Ver todos los Productos</button>-->
+    </div>
+    <article id="formContato">
+    	<div id="fundoFormContato">
+    		<h1>Los obstáculos surgen por todos lados, interna y externamente</h1>
+    		<p>Enfrentarlos y superarlos es solo una parte de la victoria, ya que una empresa necesita crecer de forma sostenible y no limitarse a sobrevivir.</p>
+    		<!--<div><input type="e-mail" placeholder="E-mail" name=""><input type="submit" name="" value="Enviar"></div>-->
+    	</div>   
+    	<div id="txtFormContato">
+    		<p>Como sabrá, estar a la cabeza de un equipo o de toda una empresa es un gran desafío.</p>
+    		<p>Comprender la gestión empresarial y evolucionar en tus habilidades puede ser la pieza que falta para acercarte a los objetivos marcados para tu carrera y tu proyecto emprendedor.</p>
+    	</div>
+    </article>
+    <article id="estudantes">
+    	<div>
+    		<img src="img/estudantes9.jpg">	
+    	</div>    	
+    </article>
+	<footer>
+		<div id="rodape">
+	        <div id="contato">
+	          <h4 class="tituRodape">CONTACTO</h4>
+	          <hr>
+	          <p class="txtColorCinza"><a href="mailto:sergio3412@gmail.com?subject=Contato&cc=comunicacao@imeserweb.com&cco=sac@imeserweb.com&body=Obrigado pelo contato."><i class="fa fa-envelope"></i> sergio3412@gmail.com</a></p>
+	          <p class="txtColorCinza"><a href="http://bit.ly/2gP0wQi" name="btn-w"> <i class="fa fa-whatsapp"></i> (11) 98223-4844</a></p>
+	          <p class="txtColorCinza"> <i class="fa fa-map-marker"></i> São Paulo - SP</p>
+	          
+	        </div>
+	        <div id="menuRodape" class="txtColorCinza">
+	        	<h4>MENÚ</h4>	
+	        	<hr>
+	          <ul>
+
+	              <a class="txtColorCinza scroll" href="#redesSup"><li><i class="fa fa-home"></i> Início</li></a>
+	              <a class="txtColorCinza scroll" href="#redesSup"><li><i class="fa fa-user"></i> Sobre mi</li></a>
+	              <a class="txtColorCinza scroll" href="#segTitulo"><li><i class="fa fa-folder-open"></i> Portfolio</li></a>             
+
+	              <li id="btnAbrirPerguntas" onclick="mostrarPerguntasFrequentes();"><i class="fa fa-question"></i> Preguntas frequentes</li>
+
+	              <!-- Para o termo utilizar um modal-->
+	             <!-- <li id="btnTermCond" onclick="mostrarTermosCondicoes();"><i class="fa fa-paste"></i> Termos e condições</li>-->
+	              <!-- Fim utilizar modal Termos e condições-->              
+	          </ul>
+	        </div>                
+	        <div id="redesSociais">
+	        	<h4 class="tituRodape">REDES SOCIALES</h4>
+	        	<hr>
+	       		<div><i class="fa fa-facebook"></i></div> 	
+	       		<div><i class="fa fa-youtube"></i></div> 	
+	       		<div><i class="fa fa-instagram"></i></div> 	
+	       		<div><i class="fa fa-twitter"></i></div> 	
+	        </div>
+	        <div id="logoRodape">
+	          <img src="img/logoSergio.png">
+	        </div>
+      </div>
+      <p id="direitos" class="txtColorCinza">© Todos os direitos reservados - <span class="txtColorOr">Sergio Jaimes 2021</span></p>
+	</footer>
+	<a href="#redesSup" class="scroll" id="btnVoltarTopo"><i class="fas fa-angle-up fa-2x topo"></i></a>
+	<script>
+  		function typeWriter(elemento) {
+    		const textoArray = elemento.innerHTML.split('');
+    		elemento.innerHTML = '';
+    		textoArray.forEach((letra, i) => {
+      		setTimeout(() => elemento.innerHTML += letra, 75 * i);
+    		});
+  		}
+  		const titulo = document.querySelector('#efeitoDig');
+  		typeWriter(titulo);
+	</script>
+</body>
+</html>

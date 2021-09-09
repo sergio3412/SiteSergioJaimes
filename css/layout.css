@@ -1,0 +1,525 @@
+*{
+			margin: 0;
+			padding: 0;
+			font-family: 'calibri';
+		}
+		.txtColorCinza{
+			color: gray;
+		}
+		.txtColorTeal{
+			color: rgb(0,109,150);
+		}
+		.txtColorBr{
+			color: white;
+		}
+		.txtColorOr{
+			color: orange;
+		}
+		.txtColorYe{
+			color: yellow;
+		}
+		#btnResp{
+			display: none;
+			border:none;
+		}
+		.abrirMenu{
+			display: none;
+			border:none;
+		}
+		.fecharMenu{
+				display: none;
+				border:none;
+		}
+		.iconeMenuResp{
+			display: none;
+		}
+		.barraQuadros{
+			display: none;
+		}
+		#redesSup{
+			/*background:rgb(0,72,107);*/
+			/*background:rgb(0,109,150);*/
+			/*background-image: linear-gradient(to right,rgb(0,72,107),rgb(0,109,150));*/
+			background-image: linear-gradient(to right,rgb(255, 144, 0),rgb(255, 174, 69));
+			color: white;
+			text-align: right;			
+			padding: 8px 10%;
+		}
+		#redesSup i{
+			margin:0px 10px;
+		}
+		#redesSup i:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		#redesSup span{
+			float: left;
+		}
+		#logoCabecalho{			
+			margin: 10px 0px 10px 4%;
+			width: 24%;
+			float: left;
+		}
+		#logoCabecalho img{
+			width: 100%;
+		}
+		nav{
+			margin-top: 25px;			
+			width: 65%;
+			float: right;
+			margin-right: 5%; 
+		}
+		nav ul{
+			text-align: center;
+		}
+		nav ul li{			
+			width: 8%;
+			border-bottom: 2px solid rgb(15,15,15);
+			display: inline-block;
+			margin: 0% 4%;
+			color: rgb(100,100,100);
+			transition: .3s;
+		}
+		nav ul li:hover{
+			width: 14%;
+			margin: 0% 1%;
+			cursor: pointer;
+			color: orange;
+			border-bottom: 2px solid orange;
+		}
+		#contatoSup{
+			text-align: center;
+			padding: 20px 0px;
+			width: 60%;
+			float: right;
+		}
+		#contatoSup div{
+			display: inline-block;
+			width: 30%;
+		}
+		#contatoSup a{
+			text-decoration: none;
+		}
+		#contatoSup a span:hover{
+			color: white;
+		}
+		header{
+			background: rgb(15,15,15);
+			width: 100%;
+			display: inline-block;
+		}
+		#imgHead{
+			background-image: url(../img/fundo.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			height: 550px;
+		}
+		#sombraHead{
+			background: rgba(10,10,10,.8);
+			height: 550px;
+			padding-top: 150px;
+		}
+		#sombraHead p{
+			text-align: center;	
+			font-size: 3.5em;
+		}
+		#sombraHead span{
+			font-weight: bold;
+		}
+		/*EFEITO DIGITAÇÃO*/
+		#efeitoDig{
+			max-width: 80%!important;
+			text-align: center;
+			margin-left: 15%;
+			font-family: 'Courier New', Courier, monospace;
+			color: white;
+			font-size: 2em;
+		}
+		#efeitoDig::after {
+			content: '|';
+			opacity: 1;
+			margin-left: 5px;
+			display: inline-block;
+			animation: blink .7s infinite;
+		}	
+
+	  	@keyframes blink {0%, 100% {opacity: 1;}50% {opacity: 0;}}
+		/*FIM EFEITO DIGITAÇÃO*/
+		.item img{
+			width: 100%;
+		}
+
+		#quemSou{
+			background: rgba(0,0,0,.7);
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+		}
+		#quadroQuemSou{
+			width: 60%;
+			background: rgb(18,18,18);
+			border-radius: 8px;	
+			height: 560px;
+			margin: 60px auto 0px auto;
+			padding: 30px 30px;
+		}
+		#quadroFrase{
+			width: 42%;
+			height: 150px;
+			font-size: 1.3em;
+			text-align: center;
+			padding-top: 20px;
+			padding-right: 30px;
+			float: right;
+			color: rgb(220,220,220);
+			font-style: oblique;
+
+		}
+
+		#quadroQuemSou hr{
+			width: 60%;
+			border:1px solid rgb(40,40,40);
+			margin: 20px auto;
+		}
+		#dadosQuemSou{
+			background: rgb(22,22,22);
+			width: 50%;
+			border-radius: 8px;
+			display: inline-block;
+			margin: 0 2%;
+		}
+
+		.imgSergio{
+			width: 35%;
+			float: left;
+			margin: 20px 0px 20px 20px;
+			border:4px solid orange;
+			border-radius: 200px;
+		}
+		.imgSergio img{
+			width: 100%;
+			border-radius: 200px;
+		}
+		.txtQuemSou{
+			width: 55%;
+			float: right;
+		}
+		.txtQuemSou h4{
+			margin-top: 40px;
+			width: 115px;
+			border-bottom:3px solid orange;
+			font-size: 1.4em;
+		}
+		.tituloHab{
+			font-size: 1.8em;
+			text-align: center;
+		}
+
+/*		#conhecimento{
+			border:1px solid blue;
+			width: 90%;
+			margin: 0 auto;
+
+		}
+*/
+		#esquerdo{
+			width: 48%;
+			float: left;
+		}
+		#direito{
+			width: 48%;
+			float: right;
+		}
+		
+		.caixaPorcent{
+			border:1px solid orange;
+			border-radius: 15px;	
+			margin:0% 1% 1% 0%;		
+			width: 88%;
+			display: inline-block;
+			padding: 3px;
+			box-sizing: border-box;
+		}
+		.porcentStyle{
+			color:orange;
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+			background: linear-gradient(to left,rgb(255, 174, 69),rgb(255, 119, 0));
+		}
+		.porcentHtml{
+			width: 85%;
+			
+		}
+		.porcentCss{
+			width: 80%;
+		}
+		.porcentJS{
+		 	width: 65%;
+		}
+		.porcentPhp{
+			width: 75%;
+		}
+		.porcentMysql{
+			width: 80%;
+		}
+		.porcentExPo{
+			width: 90%;
+		}
+		.qsSair{
+			width: 18%;
+			border:1px solid orange;
+			color:rgb(210,210,210);
+			margin: 240px auto 0 auto;
+			text-align: center;
+			transition: .3s;
+		}
+		.qsSair:hover{
+			width: 30%;
+			color: white;
+			background: orange;
+			cursor: pointer;
+		}
+
+
+
+
+		#priTitulo{
+			text-align: center;
+			padding: 40px 150px;
+			width: 80%;
+			margin: 0 auto;
+			font-size: 1.3em;
+			/*color: rgb(0,109,150);*/
+		}
+			
+		#quadros{
+			text-align: center;
+			width: 80%;
+			margin:0px auto;
+			display: grid; 
+			grid-template-columns:23% 23% 23% 23%;
+			grid-gap: 2%;
+		}
+		.quadro{			
+			display: inline-block;
+			margin: 20px 0px;
+		}	
+		.quadroImg{
+			width: 110px;
+			height: 110px;
+			border-radius: 50px;
+			background: white;			
+			margin: 0px auto;
+			display: flex;
+			align-items: center;
+			border:3px solid rgb(255,192,0);
+			border-radius: 110px;
+		}
+		.quadroImg img{
+			width: 100%;
+			margin: 0px auto;
+			border-radius: 70%;
+		}
+		.quadroTxt h4{
+			color: black;
+			font-weight: bold;
+		}
+		#segTitulo{
+			margin: 60px 0px;
+			background-image: linear-gradient(rgb(255, 174, 69),rgb(255, 144, 0));
+			text-align: center;
+			padding: 40px 150px;
+			color: white;
+		}
+		#segQuadro{			
+			width: 70%;
+			margin:0px auto;
+			display: grid; 
+			grid-template-columns:32% 32% 32%;
+			grid-gap: 2%;
+		}
+		#segQuadro h4{
+			text-align: center;
+		}
+		.divImgCurso{
+			width: 100%;									
+		}
+		.divImgCurso img{
+			width: 100%;
+		}
+		.divImgCurso img:hover{
+			opacity: .7;
+			cursor: pointer;
+		}
+		.txtJustificado{
+			text-align: justify;
+		}
+		.quadroTxt span{
+			color: orange;
+		}
+		
+		footer{
+		  background: rgb(15,15,15);   
+		  padding:35px 0px 35px 0px;   
+		}
+		footer h4{			
+			color: orange;
+			text-align: left;
+		}
+		footer hr{
+			width: 50px;
+			border: 2px solid orange;
+			margin-top: -6px;
+		}
+
+		#contato{
+			padding-left:20%;
+		}
+		#contato a{
+			color: gray;
+			text-decoration: none;
+		}
+		#contato a:hover{
+			color: white;
+		}
+		#rodape{
+		  display: grid;
+		  grid-template-columns:25% 15% 40% 20%;       
+		}
+		#menuRodape{			
+			display: inline-block;
+		}
+		#menuRodape a{
+			text-decoration: none;
+		}
+		#menuRodape li{
+			list-style: none;
+			border: none;
+			margin:0px;
+			padding: 0px;
+		}
+
+		#menuRodape li:hover{
+		  color: rgb(255,159,0);
+		  cursor: pointer;
+		  border: none;
+		}
+		#redesSociais{
+			text-align: left;
+			padding-left: 25%;
+		}
+
+	    #rodape #redesSociais div{      
+	      width: 10%;
+	      display: inline-block; 
+	      margin: 15px 5% 0px 1%;     
+	      color: white;font-size: 3em;
+	    }
+	    #redesSociais div i:hover{
+	    	color: rgb(255,159,0);
+	    	cursor: pointer;	    	
+	    }
+
+	    #logoRodape{
+	      width: 90%;            
+	      margin-right: 10%;
+	      display: flex;
+	      align-items: center;
+	    }
+	   
+	    #logoRodape img{
+	    	width: 100%;
+	    }
+	    #direitos{text-align: center;color: white;}
+	    #estudantes{
+	    	margin-top: 80px;
+	    }
+	    #estudantes div{
+	    	width: 100%
+	    }
+	    #estudantes div img{
+	    	width:100%;
+	    }
+	    #formContato{
+	    	width: 100%;
+	    	background-image: url('../img/money.png');
+	    	background-size: 100% 100%;
+	    	background-repeat: no-repeat;
+	    	height: 500px;
+	    }
+	    #fundoFormContato{
+	    	height: 400px;
+	    	background: rgba(0,0,0,.6);	
+	    	padding-top: 120px;
+	    	color: white;
+	    	text-align: center;    	
+	    }
+	    #fundoFormContato p{
+	    	width: 50%;
+	    	margin: 45px auto 0 auto;
+	    	font-size: 1.4em;
+	    }
+	    #txtFormContato{
+	    	height: 120px;
+	    	padding-top: 25px;
+	    	color: white;
+	    	background:orange;	    	
+	    }
+	    #txtFormContato p{
+	    	text-align: center; 
+	    	font-size: 1.2em;
+	    	width: 60%;
+	    	margin: 0 auto;   	
+		}
+		/*#txtFormContato h4{
+			text-align: center;
+			float: left;
+			width: 30%;
+			margin-top: 30px;
+			margin-left: 10%;
+		}*/
+	    
+	    #btnTodosCursos{
+	    	margin-top: 60px;
+	    	text-align: center;
+	    	height: 180px;
+	    }
+	    #btnTodosCursos button{
+	    	padding: 5px 30px;
+	    	border: 2px solid rgb(255,159,0);
+	    	color: gray;
+	    	border-radius: 16px;
+	    	background: none;
+	    	transition: .3s;
+	    }
+	    #btnTodosCursos button:hover{
+	    	cursor: pointer;
+	    	padding:  5px 65px;
+	    	background:rgb(255,159,0);
+	    	color: white;
+	    }
+	    /*input[type='e-mail']{
+	    	color: gray;
+	    	border-radius: 5px;
+	    	padding: 5px 40px 5px 8px;
+	    }
+	    input[type='submit']{
+	    	background:orange;
+	    	border:none;
+	    	padding: 5px 40px;
+	    }*/
+	    .topo{
+			position: fixed;
+			bottom: 26%; 
+			right:5%;
+			z-index: 100;
+			color: rgb(255,129,0);
+			display: none;
+		}
+		#btnVoltarTopo{
+			border:none;
+			margin: 0;
+			padding: 0;
+		}
